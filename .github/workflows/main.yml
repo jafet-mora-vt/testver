@@ -29,5 +29,5 @@ jobs:
     - id: get_version
       uses: battila7/get-version-action@v2
 
-    - run: echo ${{ steps.get_version.outputs.version }} 2
+    - run: echo ${{ steps.get_version.outputs.version }} 1
     - run: echo ${{ steps.set-version.outputs.version }} 0
