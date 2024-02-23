@@ -17,9 +17,7 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Set VERSION variable from tag
-      id: set-version
-      run: echo "version=${GITHUB_REF##refs/tags/}" >> $GITHUB_ENV
+    - id: get_version
+      uses: battila7/get-version-action@v2
 
-    - name: Show VERSION
-      run: echo ${{ env.version }}
+    - run: echo ${{ steps.get_version.outputs.version }}
