@@ -19,7 +19,7 @@ jobs:
 
     - name: Set VERSION variable from tag
       id: set-version
-      run: echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+      run: echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
     - name: Show VERSION
       run: echo ${{ env.version }}
